@@ -1,6 +1,7 @@
 module com.pclient.posteoclient {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.web;
 
 
     opens com.pclient.posteoclient to javafx.fxml;
