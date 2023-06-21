@@ -8,7 +8,7 @@
 
 <StackPane fx:id="mainStackPane" styleClass="mainStack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pclient.posteoclient.HelloController">
    <VBox>
-      <AnchorPane prefHeight="100.0" prefWidth="200.0" />
+      <AnchorPane styleClass="navbarPane" prefHeight="42.0" prefWidth="200.0" />
 
             <WebView fx:id="mainWebView" prefHeight="500.0" prefWidth="1000.0" />
    </VBox>

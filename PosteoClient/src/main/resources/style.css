@@ -1,4 +1,9 @@
 
 .mainStack{
-    -fx-background-radius: 5 5 5 5;
+    -fx-background-radius: 6 6 6 6;
+}
+
+.navbarPane{
+    -fx-background-color: #98bc4f;
+    -fx-background-radius: 6 6 0 0;
 }

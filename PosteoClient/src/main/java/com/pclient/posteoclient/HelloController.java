@@ -1,12 +1,15 @@
 package com.pclient.posteoclient;
 
 import javafx.beans.value.ObservableValue;
+import javafx.collections.ListChangeListener;
 import javafx.concurrent.Worker;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -21,6 +24,14 @@ public class HelloController {
 
     private void setWebView(WebEngine webEngine){
         webEngine.load(POSTEO_URL);
+
+        // Hide ScrollBar
+        mainWebView.getChildrenUnmodifiable().addListener((ListChangeListener<Node>) change -> {
+            Set<Node> deadSeaScrolls = mainWebView.lookupAll(".scroll-bar");
+            for (Node scroll : deadSeaScrolls) {
+                scroll.setVisible(false);
+            }
+        });
 
         // Wait after page fully loaded
         webEngine.getLoadWorker().stateProperty().addListener(
