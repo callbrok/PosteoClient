@@ -3,11 +3,7 @@ package com.pclient.posteoclient;
 import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Worker;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.robot.Robot;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
@@ -36,10 +32,6 @@ public class HelloController {
                     }
 
 
-                    // print Main Color
-                    getPageMainColor();
-
-
                     injectJSCredential(webEngine, "prova");
 
                 } );
@@ -56,13 +48,6 @@ public class HelloController {
         );
     }
 
-    private void getPageMainColor(){
-        int xValue = 200;
-        int yValue = 200;
-        Robot robot = new Robot();
-
-        Color c = robot.getPixelColor(xValue, yValue);
-    }
 
     public void initialize(){
         WebEngine webEngine = mainWebView.getEngine();
